@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="p-6">
+        <aside v-if="isNavbarOpen" class="fixed top-0 left-0 w-3/4 bg-white h-screen z-10 shadow-md p-8">
+            <div class="flex justify-center">
+                <img src="./images/logo.png" alt="" class="w-24 h-24">
+            </div>
+            <ul class="mt-16 flex justify-center group cursor-pointer">
+                <li class="flex gap-2 group-hover:bg-blue-100 p-2 rounded-full">
+                    <img src="./images/home-select.png" alt="" class="w-6 h-6">
+                    <span class="text-blue-900 group-hover:font-semibold">Dashboard</span>
+                </li>
+            </ul>
+        </aside>
+        <nav>
+            <div @click="isNavbarOpen = true" class="cursor-pointer">
+                <h1 class="text-blue-900 text-5xl font-bold mb-1">Dashboard</h1>
+                <span class="text-gray-500">Hi admin, welcome back!</span>
+            </div>
+            <div class="flex mt-4">
+                <div class="relative flex-1">
+                    <input type="text" name="" id="" placeholder="Search everything" class="w-full p-2 pl-10 rounded-full border border-gray-300">
+                    <img src="./images/search.png" alt="" srcset="" class="absolute top-2 left-2">
+                </div>
+                <div class="w-10 h-10 rounded-full shadow-sm flex">
+                    <img src="./images/notification.png" alt="" class="m-auto">
+                </div>
+                <div class="w-10 h-10">
+                    <img src="./images/Avatar.png" alt="">
+                </div>
+            </div>
+        </nav>
+        <div class="grid grid-cols-2 mt-8">
+            <div>
+                <h2 class="font-semibold text-4xl">2,223,214</h2>
+                <div class="flex gap-2 justify-start items-center mt-2">
+                    <span>Total View</span>
+                    <div class="flex bg-green-200 gap-2 w-20 justify-center items-center rounded-md">
+                        <img src="./images/up.png" alt="">
+                        <span class="text-green-500">+22</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="font-semibold text-4xl">2,223,214</h2>
+                <div class="flex gap-2 justify-start items-center mt-2">
+                    <span>Total View</span>
+                    <div class="flex bg-green-200 gap-2 w-20 justify-center items-center rounded-md">
+                        <img src="./images/up.png" alt="">
+                        <span class="text-green-500">+22</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between items-center mt-8">
+            <h2 class="text-2xl font-semibold">View Statistic</h2>
+            <div class="flex border border-gray-300 rounded-md items-center px-2 py-1">
+                <img src="./images/date.png" alt="" class="w-6 h-6">
+                <span>Yesterday</span>
+            </div>
+        </div>
+        <div>
+            <div class="flex justify-between items-center mt-8">
+                <h2 class="text-2xl font-semibold">Popular Post</h2>
+                <div class="flex border border-gray-300 rounded-md items-center px-2 py-1">
+                    <img src="./images/date.png" alt="" class="w-6 h-6">
+                    <span>Yesterday</span>
+                </div>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <div class="w-12 h-12 rounded-full bg-blue-200 flex">
+                    <span class="text-blue-500 m-auto font-semibold">CP</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <span class="text-xl font-semibold">CSS Performance</span>
+                    <span class="text-gray-500">18 October 2020</span>
+                    <div class="flex gap-2">
+                        <div class="bg-red-300 rounded-md px-2">
+                            <span>Front End</span>
+                        </div>
+                        <div class="bg-blue-300 rounded-md px-2">
+                            <span>Development</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./images/view.png" alt="" class="w-4 h-4">
+                        <span class="text-gray-500">213,456</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-4 mt-4">
+                <div class="w-12 h-12 rounded-full bg-blue-200 flex">
+                    <span class="text-blue-500 m-auto font-semibold">CP</span>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <span class="text-xl font-semibold">CSS Performance</span>
+                    <span class="text-gray-500">18 October 2020</span>
+                    <div class="flex gap-2">
+                        <div class="bg-red-300 rounded-md px-2">
+                            <span>Front End</span>
+                        </div>
+                        <div class="bg-blue-300 rounded-md px-2">
+                            <span>Development</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <img src="./images/view.png" alt="" class="w-4 h-4">
+                        <span class="text-gray-500">213,456</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
